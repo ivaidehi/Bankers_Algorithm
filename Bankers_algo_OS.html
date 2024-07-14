@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Banker's Algorithm</title>
+            <style>
+                  input::-webkit-outer-spin-button,
+                  input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                  }
+
+                  table {
+                        border-collapse: collapse;
+                        width: 100%;
+                  }
+
+                  th,
+                  td {
+                        border: 1px solid black;
+                        padding: 8px;
+                        text-align: left;
+                  }
+
+                  /* Adjust width of input boxes */
+                  .inputCell input {
+                        width: calc(15px - 16px);
+                        /* Adjusted width to 15px */
+                        margin-right: 5px;
+                        /* Add some space between textboxes */
+                  }
+
+                  .availableInputContainer {
+                        margin-top: 10px;
+                        /* Added margin-top for spacing */
+                  }
+            </style>
+      </head>
+
+      <body>
+            <h2>Banker's Algorithm in Operating System</h2>
+            <hr>
+            <hr><br>
+            <label for="processes"><b>Enter number of Processes:</b></label>
+            <input type="number" id="processes" name="processes" min="1">
+            <button onclick="addRows()">Add Process</button>
+            <br><br>
+            <table id="dataTable">
+                  <tr>
+                        <th>Process</th>
+                        <th>Maximum</th>
+                        <th>Allocation</th>
+                        <th>Available</th>
+                  </tr>
+                  <tr>
+                        <th name="th"></th>
+                        <th name="th" style="letter-spacing: 45px;">ABCDE</th>
+                        <th name="th" style="letter-spacing: 45px;">ABCDE</th>
+                        <th name="th" style="letter-spacing: 45px;">ABCDE</th>
+                  </tr>
+                  <!-- New row for labels A, B, C, D, E -->
+            </table>
+            <br> <br>
+            <button onclick="done()">Done</button>
+            <button onclick="findSafeSequence()">Find Safe Sequence</button>
+            <br><br>
+            <!-- Button to trigger safe sequence calculation -->
+            <table id="outputTable" style="display: none;">
+                  <caption>Array Input</caption>
+            </table>
+            <br><br>
+            <hr>
+            <div id="firstInputSum"></div> <!-- Div to display sum1 -->
+            <div id="secondInputSum"></div> <!-- Div to display minus1 -->
+            <br><br>
+
+            <script src="logicFunc.js"> </script>
+      </body>
+
+</html>
